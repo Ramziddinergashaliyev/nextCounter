@@ -1,3 +1,4 @@
+"use client";
 import { defaultCounter } from "@/lib/features/counter/counterSlice";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
