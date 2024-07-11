@@ -9,7 +9,12 @@ const Header = () => {
   return (
     <div>
       <h1>Count {count} </h1>
-      <button onClick={() => dispatch(increment())}>Inc</button>
+      <button
+        className="py-4, bg-slate-500"
+        onClick={() => dispatch(increment())}
+      >
+        Inc
+      </button>
     </div>
   );
 };
