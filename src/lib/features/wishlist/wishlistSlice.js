@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  value: JSON.parse(localStorage.getItem("wishlist")) || [],
+  value: [],
 };
 
 const wishlistSlice = createSlice({
@@ -17,8 +17,11 @@ const wishlistSlice = createSlice({
       }
       localStorage.setItem("wishlist", JSON.stringify(state.value));
     },
+    wishlistLocal: (state, action) => {
+      state.value = action.payload;
+    },
   },
 });
 
-export const { toggleHeart } = wishlistSlice.actions;
+export const { toggleHeart, wishlistLocal } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
